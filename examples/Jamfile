@@ -1,0 +1,12 @@
+project cctz_examples
+        : requirements  <library>/cctz//cctz 
+        : build-dir ../bazel-boost-build
+;
+
+run classic.cc ;
+run epoch_shift.cc ;
+run example1.cc ;
+run example2.cc ;
+run example3.cc ;
+run example4.cc ;
+run hello.cc ;

@@ -1,0 +1,31 @@
+project cctz
+        : usage-requirements <include>include
+        : requirements <cxxflags>"-std=c++11 "
+        : source-location src
+        : build-dir bazel-boost-build
+;
+
+lib cctz : 
+ time_zone_format.cc
+ time_zone_if.cc
+ time_zone_impl.cc
+ time_zone_info.cc
+ time_zone_libc.cc
+ time_zone_lookup.cc
+ time_zone_posix.cc
+ : 
+ <include>include  
+ <cxxflags>"-pthread " <linkflags>"-pthread " # NOTE: without this flag fails for gcc;ubuntu
+;
+
+exe time_tool : time_tool.cc : <library>cctz ;
+
+build-project examples ;
+
+# TODO requires gtest
+#build-project src ; # tests
+#cctz_v1_test.cc ;
+#civil_time_test.cc
+#time_zone_format_test.cc
+#time_zone_lookup_test.cc
+
