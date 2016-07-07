@@ -24,4 +24,3 @@ lib cctz :
 exe time_tool : time_tool.cc : <library>cctz/<link>static ;
 
 build-project examples ;
-
