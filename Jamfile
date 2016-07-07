@@ -15,7 +15,7 @@ lib cctz :
  time_zone_posix.cc
  : 
  <include>include  
- <cxxflags>"-pthread " <linkflags>"-pthread " # NOTE: without this flag fails for gcc;ubuntu
+ <threading>multi #NOTE: without multithreading enabled fails for gcc;ubuntu
 ;
 
 # following target 'src' depends on googletest lib: expects predefined declarations /googlemock and /googletest
