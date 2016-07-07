@@ -15,7 +15,7 @@ lib cctz :
  time_zone_posix.cc
  : 
  :
- : <threading>multi # usage-reqs but do not work/propagate to examples - why ???
+ : <threading>multi # <include>include usage-reqs but do not work/propagate to examples - why ???
 ;
 
 # following target 'src' depends on googletest lib: expects predefined declarations /googlemock and /googletest
