@@ -1,5 +1,6 @@
-project 
-        : requirements  <library>..//cctz
+project cctz_examples
+        : requirements  <library>/cctz//cctz 
+        : build-dir ../bazel-boost-build
 ;
 
 run classic.cc ;

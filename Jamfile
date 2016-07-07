@@ -1,6 +1,6 @@
-project 
+project cctz
         : usage-requirements <include>include
-        : requirements       <include>include <cxxflags>"-std=c++11 " <threading>multi #NOTE: without multithreading enabled fails for gcc;ubuntu
+        : requirements <cxxflags>"-std=c++11 "
         : source-location src
         : build-dir bazel-boost-build
 ;
@@ -14,8 +14,8 @@ lib cctz :
  time_zone_lookup.cc
  time_zone_posix.cc
  : 
- :
- : <threading>multi # usage-reqs but do not work/propagate to examples - why ???
+ <include>include  
+ <cxxflags>"-pthread " <linkflags>"-pthread " # NOTE: without this flag fails for gcc;ubuntu
 ;
 
 # following target 'src' depends on googletest lib: expects predefined declarations /googlemock and /googletest
