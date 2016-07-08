@@ -1,0 +1,14 @@
+project :
+  requirements
+    <include>..
+    <library>/cctz//cctz
+    <library>/google/gmock
+    <library>/google/gtest
+    <threading>multi
+;
+
+run cctz_v1_test.cc ;
+run civil_time_test.cc ;
+run time_zone_format_test.cc ; # ICE for gcc 6-1
+run time_zone_lookup_test.cc ;
+
