@@ -1,7 +1,7 @@
 project :
   requirements
     <include>..
-    <library>..//cctz
+    <library>..//cctz/<link>static
     <library>/googlemock
     <library>/googletest
     <threading>multi
