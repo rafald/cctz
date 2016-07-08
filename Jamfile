@@ -18,7 +18,8 @@ lib cctz :
  : <threading>multi # usage-reqs but do not work/propagate to examples - why ???
 ;
 
-build-project src ; # this runs tests ; requires/depends on googletest lib
+# following target 'src' depends on googletest lib: expects predefined declarations /googlemock and /googletest
+# build-project src ; # this runs tests 
 
 exe time_tool : time_tool.cc : <library>cctz/<link>static ;
 
