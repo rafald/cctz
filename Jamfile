@@ -18,14 +18,9 @@ lib cctz :
  <threading>multi #NOTE: without multithreading enabled fails for gcc;ubuntu
 ;
 
+build-project src ; # this runs tests which require googletest lib
+
 exe time_tool : time_tool.cc : <library>cctz ;
 
 build-project examples ;
-
-# TODO requires gtest
-#build-project src ; # tests
-#cctz_v1_test.cc ;
-#civil_time_test.cc
-#time_zone_format_test.cc
-#time_zone_lookup_test.cc
 
