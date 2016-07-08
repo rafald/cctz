@@ -2,8 +2,8 @@ project :
   requirements
     <include>..
     <library>..//cctz
-    <library>/google/gmock
-    <library>/google/gtest
+    <library>/googlemock
+    <library>/googletest
     <threading>multi
 ;
 
