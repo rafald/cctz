@@ -15,12 +15,12 @@ lib cctz :
  time_zone_posix.cc
  : 
  :
- : <threading>multi # <include>include usage-reqs but do not work/propagate to examples - why ???
+ : <threading>multi # usage-reqs but do not work/propagate to examples - why ???
 ;
 
 # following target 'src' depends on googletest lib: expects predefined declarations /googlemock and /googletest
-build-project src ; # this runs tests which require googletest lib
+build-project src ; # this runs tests ; requires/depends on googletest lib
 
-exe time_tool : time_tool.cc : <library>cctz ;
+exe time_tool : time_tool.cc : <library>cctz/<link>static ;
 
 build-project examples ;
