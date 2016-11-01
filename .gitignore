@@ -2,3 +2,4 @@
 /bazel-*
 # ignore non-bazel build products
 /build
+*~
